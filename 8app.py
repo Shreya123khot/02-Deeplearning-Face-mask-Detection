@@ -18,7 +18,7 @@ if "open_camera" not in st.session_state:
 
 # ---------------- Load Model ----------------
 try:
-    model = load_model("mask_final.keras")
+     model = load_model("mask_final.keras", compile=False)
 except Exception as e:
     st.error(f"Error loading model:\n{e}")
     st.stop()
